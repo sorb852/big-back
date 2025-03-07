@@ -1,0 +1,8 @@
+[
+{
+  "directory": "C:/Users/reeld/Desktop/codesandstuff/C/CPP/raylib/raylib-nvim-test/build",
+  "command": "C:\\clangd\\bin\\clang++.exe -isystem C:/Users/reeld/Desktop/codesandstuff/C/CPP/raylib/raylib-nvim-test/build/vcpkg_installed/x64-windows/include -O0 -std=gnu++17 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -g -Xclang -gcodeview -IC:/Users/reeld/Desktop/codesandstuff/C/CPP/raylib/raylib-nvim-test/build/vcpkg_installed/x64-windows/debug/../include -o CMakeFiles\\RaylibNvimTest.dir\\src\\main.cpp.obj -c C:\\Users\\reeld\\Desktop\\codesandstuff\\C\\CPP\\raylib\\raylib-nvim-test\\src\\main.cpp",
+  "file": "C:\\Users\\reeld\\Desktop\\codesandstuff\\C\\CPP\\raylib\\raylib-nvim-test\\src\\main.cpp",
+  "output": "CMakeFiles\\RaylibNvimTest.dir\\src\\main.cpp.obj"
+}
+]
