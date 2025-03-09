@@ -1,10 +1,29 @@
 #include <raylib.h>
 #include <raymath.h>
+#include <string>
 
 #define WINDOW_WIDTH 400
 #define WINDOW_HEIGHT 400
 
-int main() {
+bool check_argument(std::string arg, std::string check_short,
+                    std::string check_long) {
+  return arg == check_short || arg == check_long;
+}
+
+bool check_argument(std::string arg, std::string check) { return arg == check; }
+
+void poll_arguments(int argc, char *argv[]) {
+  // Poll arguments
+  for (int i = 1; i < argc; i++) {
+    if (check_argument(argv[i], "-d", "--debug")) {
+      SetTraceLogLevel(LOG_DEBUG);
+    }
+  }
+}
+
+int main(int argc, char *argv[]) {
+  SetTraceLogLevel(LOG_NONE);
+  poll_arguments(argc, argv);
   InitWindow(WINDOW_WIDTH, WINDOW_HEIGHT, "");
   SetConfigFlags(FLAG_VSYNC_HINT | FLAG_BORDERLESS_WINDOWED_MODE |
                  FLAG_WINDOW_UNDECORATED | FLAG_WINDOW_TOPMOST |
@@ -30,6 +49,7 @@ int main() {
       LoadTexture("resource/big_back2.png"),
       LoadTexture("resource/big_back3.png"),
   };
+  TraceLog(LOG_DEBUG, "Hey guys im teto. i am a pear now");
   // Main loop
   while (!WindowShouldClose()) {
     dt = GetFrameTime();
